@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Kết quả Benchmark thực tế</h2>
+<ul>
+  <li>File: {{ filename }}</li>
+  <li>Thuật toán: {{ algo }}</li>
+  <li>Kích thước bảng: 2^{{ exp }}</li>
+  <li>Chunk size: {{ chunksize }}</li>
+  <li>Thời gian insert: {{ ti }} giây</li>
+  <li>Thời gian search: {{ ts }} giây</li>
+  <li>Bộ nhớ peak: {{ mem }} MB</li>
+</ul>
+<a href="{{ url_for('index') }}">Quay lại</a>
+{% endblock %}

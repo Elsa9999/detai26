@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card mx-auto mt-4" style="max-width: 700px;">
+  <div class="card-header">Fast Feature Map</div>
+  <div class="card-body">
+    <form method="get" class="row g-2 mb-3">
+      <div class="col-md-8">
+        <input type="text" name="text" class="form-control" value="{{ request.args.get('text', '') or ' '.join(tokens) }}" placeholder="Nhập text...">
+      </div>
+      <div class="col-md-4">
+        <select name="method" class="form-select">
+          <option value="chaining" {% if request.args.get('method', 'chaining') == 'chaining' %}selected{% endif %}>Chaining</option>
+          <option value="open_double" {% if request.args.get('method') == 'open_double' %}selected{% endif %}>Open Addressing (Double)</option>
+          <option value="linear" {% if request.args.get('method') == 'linear' %}selected{% endif %}>Linear Probing</option>
+          <option value="quadratic" {% if request.args.get('method') == 'quadratic' %}selected{% endif %}>Quadratic Probing</option>
+        </select>
+      </div>
+      <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-primary"><i class="bi bi-lightning"></i> Vectorize</button>
+        <button type="button" id="exportFeatureMapCsv" class="btn btn-success"><i class="bi bi-download"></i> Xuất CSV</button>
+      </div>
+    </form>
+    <h5>Bảng ánh xạ feature → id</h5>
+    <table class="table table-bordered table-sm mb-4">
+      <thead><tr><th>Feature</th><th>ID</th></tr></thead>
+      <tbody>
+        {% for tok, fid in mapping|unique %}
+        <tr><td>{{ tok }}</td><td>{{ fid }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <h5>Vector 1-hot</h5>
+    {% if error %}
+      <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+    {% if vector is defined and vector|length > 0 %}
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        {% for v in vector %}
+          <span class="badge bg-{{ 'success' if v else 'secondary' }}">{{ v }}</span>
+        {% endfor %}
+      </div>
+      <canvas id="vectorChart" height="60"></canvas>
+    {% else %}
+      <div class="text-danger mb-3">Không có vector kết quả.</div>
+    {% endif %}
+    <a href="/" class="btn btn-outline-primary mt-3"><i class="bi bi-arrow-left"></i> Quay lại</a>
+  </div>
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% if vector is defined and vector and vector|length > 0 %}
+<script>
+const vector = {{ vector|tojson }};
+const ctx = document.getElementById('vectorChart').getContext('2d');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: vector.map((_,i) => i),
+    datasets: [{
+      label: '1-hot vector',
+      data: vector,
+      backgroundColor: vector.map(v => v ? 'rgba(54, 162, 235, 0.7)' : 'rgba(200,200,200,0.3)')
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true, max: 1 } }
+  }
+});
+</script>
+{% endif %}
+<script>
+document.getElementById('exportFeatureMapCsv').onclick = function() {
+  const rows = [['Feature', 'ID']
+    {% for tok, fid in mapping %}
+      ,["{{ tok }}", "{{ fid }}"]
+    {% endfor %}
+  ];
+  let csv = rows.map(r => r.join(",")).join("\n");
+  const blob = new Blob([csv], {type: 'text/csv'});
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'feature_map.csv';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  window.URL.revokeObjectURL(url);
+};
+</script>
+
+{% if error %}
+  <div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+{% endblock %}

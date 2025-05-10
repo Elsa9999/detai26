@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row gy-4">
+  <!-- Synthetic Benchmark -->
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-header">Synthetic Benchmark</div>
+      <div class="card-body">
+        <form method="post" action="{{ url_for('benchmark') }}">
+          <div class="mb-3">
+            <label for="n_items" class="form-label">Number of items</label>
+            <input type="number" id="n_items" name="n_items" class="form-control" value="100000" min="1000">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Chọn thuật toán (có thể chọn nhiều)</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="algorithms" value="chaining" id="alg_chaining" checked>
+              <label class="form-check-label" for="alg_chaining">
+                Chaining
+                <i class="bi bi-info-circle text-info ms-1" data-bs-toggle="tooltip" title="Chaining: Mỗi bucket là một danh sách liên kết. Xử lý xung đột bằng cách thêm phần tử vào danh sách."></i>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="algorithms" value="open_double" id="alg_open_double" checked>
+              <label class="form-check-label" for="alg_open_double">
+                Open Addressing (Double Hashing)
+                <i class="bi bi-info-circle text-info ms-1" data-bs-toggle="tooltip" title="Double Hashing: Khi xung đột, sử dụng hàm băm phụ để xác định bước nhảy tiếp theo."></i>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="algorithms" value="linear" id="alg_linear">
+              <label class="form-check-label" for="alg_linear">
+                Open Addressing (Linear Probing)
+                <i class="bi bi-info-circle text-info ms-1" data-bs-toggle="tooltip" title="Linear Probing: Khi xung đột, kiểm tra tuần tự các vị trí tiếp theo cho đến khi tìm được ô trống."></i>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="algorithms" value="quadratic" id="alg_quadratic">
+              <label class="form-check-label" for="alg_quadratic">
+                Open Addressing (Quadratic Probing)
+                <i class="bi bi-info-circle text-info ms-1" data-bs-toggle="tooltip" title="Quadratic Probing: Khi xung đột, kiểm tra các vị trí theo công thức bình phương (i^2) để giảm clustering."></i>
+              </label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="table_size_exp" class="form-label">Table size exponent (2^exp)</label>
+            <input type="number" id="table_size_exp" name="table_size_exp" class="form-control" value="20" min="10" max="26">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Run Synthetic</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Realistic Benchmark Link -->
+  <div class="col-md-6">
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">Realistic Benchmark</div>
+      <div class="card-body">
+        <p>Upload your own CSV file of <code>key,value</code> pairs to benchmark with real data.</p>
+        <a href="/upload" class="btn btn-outline-primary w-100">Go to Realistic Benchmark</a>
+      </div>
+    </div>
+
+    <!-- Fast Feature Map -->
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">Fast Feature Map</div>
+      <div class="card-body">
+        <form method="post" action="{{ url_for('feature_map') }}" class="d-flex gap-2">
+          <input type="text" name="sample_text" class="form-control" placeholder="Enter text...">
+          <button type="submit" class="btn btn-success">Vectorize</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- CRUD Demo -->
+    <div class="card shadow-sm">
+      <div class="card-header">CRUD Demo</div>
+      <div class="card-body">
+        <p>Thực hành Insert / Search / Delete trực tiếp trên các hash table.</p>
+        <a href="{{ url_for('crud') }}" class="btn btn-outline-warning w-100">Go to CRUD Demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>var tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));tooltipTriggerList.map(function(e){return new bootstrap.Tooltip(e)});</script>
+{% endblock %}

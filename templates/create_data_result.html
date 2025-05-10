@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+  <div class="card mx-auto" style="max-width: 600px;">
+    <div class="card-header">Kết quả tạo dữ liệu</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ message }}</h5>
+      {% if file_path %}
+        <p><b>File lưu tại:</b> <code>{{ file_path }}</code></p>
+      {% endif %}
+      <p><b>Số lượng mẫu:</b> {{ sample_count }}</p>
+      {% if vector_size %}
+        <p><b>Kích thước vector:</b> {{ vector_size }}</p>
+      {% endif %}
+      <a href="/ai_demo" class="btn btn-primary mt-3">Quay lại AI Demo</a>
+    </div>
+  </div>
+</div>
+{% endblock %} 

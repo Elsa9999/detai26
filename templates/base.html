@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or "Triển Khai Thuật Toán Hash Table với Collision Resolution cho Xử Lý Dữ Liệu Lớn trong AI" }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body { background: #f8fafc; }
+    .navbar-brand { font-weight: bold; font-size: 1.3rem; }
+    footer { background: #222; color: #fff; padding: 1rem 0; margin-top: 2rem; }
+    .footer-title { font-size: 1.1rem; font-weight: bold; }
+    .footer-authors { font-size: 1rem; }
+    .theme-green { --bs-primary: #198754; }
+    .theme-purple { --bs-primary: #6f42c1; }
+    .theme-dark { --bs-primary: #222; color: #fff; }
+    .bg-purple { background-color: #6f42c1!important; }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm" id="main-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Logo_PTIT_University.png" alt="PTIT Logo" style="height:36px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/theory">Lý thuyết</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/ai_demo">AI Demo</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="themeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Theme
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+            <li><a class="dropdown-item theme-select" data-theme="blue" href="#">Xanh dương</a></li>
+            <li><a class="dropdown-item theme-select" data-theme="green" href="#">Xanh lá</a></li>
+            <li><a class="dropdown-item theme-select" data-theme="purple" href="#">Tím</a></li>
+            <li><a class="dropdown-item theme-select" data-theme="dark" href="#">Dark</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="container my-4">
+  {% block content %}{% endblock %}
+</main>
+<footer class="text-center mt-5">
+  <div class="mb-2">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Logo_PTIT_University.png" alt="PTIT Logo" style="height:36px;">
+  </div>
+  <div class="footer-title small">Đề tài: Triển Khai Thuật Toán Hash Table với Collision Resolution cho Xử Lý Dữ Liệu Lớn trong AI</div>
+  <div class="footer-authors small">Tác giả: Liên Gia Bảo &amp; Trần Phước Lợi</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+<script>
+function setTheme(theme) {
+  const navbar = document.getElementById('main-navbar');
+  document.body.classList.remove('theme-blue','theme-green','theme-purple','theme-dark');
+  navbar.classList.remove('bg-primary','bg-success','bg-purple','bg-dark');
+  if(theme==='green') {
+    document.body.classList.add('theme-green');
+    navbar.classList.add('bg-success');
+  } else if(theme==='purple') {
+    document.body.classList.add('theme-purple');
+    navbar.classList.add('bg-purple');
+  } else if(theme==='dark') {
+    document.body.classList.add('theme-dark');
+    navbar.classList.add('bg-dark');
+  } else {
+    document.body.classList.add('theme-blue');
+    navbar.classList.add('bg-primary');
+  }
+  localStorage.setItem('theme', theme);
+}
+document.querySelectorAll('.theme-select').forEach(el => {
+  el.onclick = function() { setTheme(this.dataset.theme); };
+});
+window.onload = function() {
+  let theme = localStorage.getItem('theme') || 'blue';
+  setTheme(theme);
+};
+</script>
+</body>
+</html>

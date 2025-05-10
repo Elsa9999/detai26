@@ -1,0 +1,394 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card mx-auto mt-4" style="max-width: 1000px;">
+  <div class="card-header bg-primary text-white">
+    <h4 class="mb-0">Demo Ứng dụng Hash Table trong AI</h4>
+  </div>
+  <div class="card-body">
+    <!-- Add Data Management Section -->
+    <div class="mb-5">
+      <h5 class="mb-3">Quản lý dữ liệu</h5>
+      <div class="card mb-3">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h6>Dữ liệu mẫu</h6>
+              <div class="list-group mb-3">
+                <a href="/ai_demo/sample_data/text" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h6 class="mb-1">Dữ liệu văn bản</h6>
+                    <small>1MB</small>
+                  </div>
+                  <p class="mb-1">Bộ dữ liệu văn bản tiếng Việt mẫu</p>
+                </a>
+                <a href="/ai_demo/sample_data/vectors" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h6 class="mb-1">Dữ liệu vector</h6>
+                    <small>2MB</small>
+                  </div>
+                  <p class="mb-1">Bộ dữ liệu vector mẫu cho LSH</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h6>Tạo dữ liệu mới</h6>
+              <form method="POST" action="/ai_demo/create_data" enctype="multipart/form-data">
+                <div class="mb-3">
+                  <label class="form-label">Loại dữ liệu:</label>
+                  <select class="form-select" name="data_type">
+                    <option value="text">Văn bản</option>
+                    <option value="vectors">Vector</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Số lượng mẫu:</label>
+                  <input type="number" class="form-control" name="sample_count" value="1000" min="100" max="10000">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Kích thước vector (cho dữ liệu vector):</label>
+                  <input type="number" class="form-control" name="vector_size" value="100" min="10" max="1000">
+                </div>
+                <button type="submit" class="btn btn-primary">Tạo dữ liệu</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Hashing Demo -->
+    <div class="mb-5">
+      <h5 class="mb-3">1. Feature Hashing (Hashing Trick)</h5>
+      <div class="card mb-3">
+        <div class="card-body">
+          <p class="text-muted">
+            Feature Hashing là kỹ thuật chuyển đổi văn bản thành vector số học bằng cách sử dụng hash function.
+            Kỹ thuật này giúp xử lý dữ liệu lớn hiệu quả và tránh việc lưu trữ từ điển.
+          </p>
+          <form method="POST" action="/ai_demo/feature_hash" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label class="form-label">Nguồn dữ liệu:</label>
+              <select class="form-select mb-2" name="data_source" onchange="toggleDataSource(this.value)">
+                <option value="text">Nhập văn bản</option>
+                <option value="file">Upload file</option>
+                <option value="sample">Dữ liệu mẫu</option>
+                <option value="api">API bên ngoài</option>
+              </select>
+              
+              <div id="textInput" class="data-source">
+                <textarea class="form-control mb-2" name="text" rows="3" placeholder="Nhập văn bản cần phân tích..."></textarea>
+              </div>
+              
+              <div id="fileInput" class="data-source" style="display: none;">
+                <div class="input-group">
+                  <input type="file" class="form-control" name="file" accept=".txt,.csv">
+                  <button class="btn btn-outline-secondary" type="button" onclick="document.querySelector('input[name=file]').value=''">Xóa</button>
+                </div>
+                <small class="text-muted">Hỗ trợ file .txt và .csv</small>
+              </div>
+              
+              <div id="sampleInput" class="data-source" style="display: none;">
+                <select class="form-select" name="sample_data">
+                  <option value="news">Tin tức</option>
+                  <option value="reviews">Đánh giá sản phẩm</option>
+                  <option value="social">Mạng xã hội</option>
+                </select>
+              </div>
+              
+              <div id="apiInput" class="data-source" style="display: none;">
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" name="api_url" placeholder="URL API">
+                  <button class="btn btn-outline-secondary" type="button" onclick="testApi()">Kiểm tra</button>
+                </div>
+                <div class="mb-2">
+                  <input type="text" class="form-control" name="api_key" placeholder="API Key (nếu cần)">
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Chọn thuật toán hash:</label>
+              <select class="form-select" name="hash_algo">
+                <option value="chaining">Chaining</option>
+                <option value="linear">Linear Probing</option>
+                <option value="quadratic">Quadratic Probing</option>
+                <option value="double">Double Hashing</option>
+              </select>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Kích thước batch:</label>
+              <input type="number" class="form-control" name="batch_size" value="1000" min="100" max="10000">
+              <small class="text-muted">Số lượng dòng xử lý mỗi lần (càng lớn càng nhanh nhưng tốn nhiều bộ nhớ)</small>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Chuyển đổi</button>
+          </form>
+        </div>
+      </div>
+      {% if feature_hash_results %}
+      <div class="card">
+        <div class="card-body">
+          <h6>Kết quả phân tích:</h6>
+          <div class="alert alert-info">
+            <strong>Văn bản đầu vào:</strong> {{ feature_hash_results.input_text }}
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h6>Vector Hash:</h6>
+                  <pre class="bg-light p-2">{{ feature_hash_results.hash_vector }}</pre>
+                  <small class="text-muted">Số phần tử khác 0: {{ feature_hash_results.non_zero_elements }}</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h6>Vector TF-IDF:</h6>
+                  <pre class="bg-light p-2">{{ feature_hash_results.tfidf_vector }}</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h6>Feature Mapping (10 từ đầu tiên):</h6>
+                  <pre class="bg-light p-2">{{ feature_hash_results.feature_mapping }}</pre>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h6>Thống kê token:</h6>
+                  <pre class="bg-light p-2">{{ feature_hash_results.token_stats }}</pre>
+                  <small class="text-muted">Tổng số token: {{ feature_hash_results.total_tokens }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-secondary">
+            <strong>Thuật toán hash:</strong> {{ feature_hash_results.hash_algo }}
+          </div>
+          {% if feature_hash_results.processing_stats %}
+          <div class="alert alert-info">
+            <h6>Thống kê xử lý:</h6>
+            <ul class="mb-0">
+              <li>Tổng thời gian xử lý: {{ feature_hash_results.processing_stats.total_processing_time }} giây</li>
+              <li>Thời gian xử lý trung bình mỗi batch: {{ feature_hash_results.processing_stats.avg_processing_time }} giây</li>
+              <li>Bộ nhớ sử dụng trung bình: {{ feature_hash_results.processing_stats.avg_memory_usage }} MB</li>
+            </ul>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- LSH Demo -->
+    <div class="mb-5">
+      <h5 class="mb-3">2. Locality Sensitive Hashing (LSH)</h5>
+      <div class="card mb-3">
+        <div class="card-body">
+          <p class="text-muted">
+            LSH là kỹ thuật tìm kiếm tương tự hiệu quả trong không gian vector lớn.
+            Nó sử dụng các hash function đặc biệt để nhóm các vector tương tự vào cùng một bucket.
+          </p>
+          <form method="POST" action="/ai_demo/lsh" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label class="form-label">Nguồn dữ liệu:</label>
+              <select class="form-select mb-2" name="data_source" onchange="toggleDataSource(this.value)">
+                <option value="vector">Nhập vector</option>
+                <option value="file">Upload file</option>
+                <option value="sample">Dữ liệu mẫu</option>
+                <option value="api">API bên ngoài</option>
+              </select>
+              
+              <div id="vectorInput" class="data-source">
+                <input type="text" class="form-control mb-2" name="query_vector" placeholder="1,2,3,4,5 hoặc 1 2 3 4 5">
+              </div>
+              
+              <div id="fileInputLSH" class="data-source" style="display: none;">
+                <div class="input-group">
+                  <input type="file" class="form-control" name="file" accept=".csv,.npy">
+                  <button class="btn btn-outline-secondary" type="button" onclick="document.querySelector('input[name=file]').value=''">Xóa</button>
+                </div>
+                <small class="text-muted">Hỗ trợ file .csv và .npy</small>
+              </div>
+              
+              <div id="sampleInput" class="data-source" style="display: none;">
+                <select class="form-select" name="sample_data">
+                  <option value="news">Tin tức</option>
+                  <option value="reviews">Đánh giá sản phẩm</option>
+                  <option value="social">Mạng xã hội</option>
+                </select>
+              </div>
+              
+              <div id="apiInput" class="data-source" style="display: none;">
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" name="api_url" placeholder="URL API">
+                  <button class="btn btn-outline-secondary" type="button" onclick="testApi()">Kiểm tra</button>
+                </div>
+                <div class="mb-2">
+                  <input type="text" class="form-control" name="api_key" placeholder="API Key (nếu cần)">
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Số lượng kết quả:</label>
+              <input type="number" class="form-control" name="k" value="5" min="1" max="20">
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Kích thước batch:</label>
+              <input type="number" class="form-control" name="batch_size" value="1000" min="100" max="10000">
+              <small class="text-muted">Số lượng vector xử lý mỗi lần (càng lớn càng nhanh nhưng tốn nhiều bộ nhớ)</small>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+          </form>
+        </div>
+      </div>
+      {% if lsh_results %}
+      <div class="card">
+        <div class="card-body">
+          <h6>Kết quả tìm kiếm:</h6>
+          <div class="alert alert-info">
+            <strong>Query vector:</strong> {{ lsh_results.query_vector }}
+          </div>
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Độ tương đồng Cosine</th>
+                  <th>Vector</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for result in lsh_results.results %}
+                <tr>
+                  <td>{{ result.id }}</td>
+                  <td>{{ result.cosine_similarity }}</td>
+                  <td><small>{{ result.vector }}</small></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <div class="alert alert-secondary mt-3">
+            <h6>Thống kê:</h6>
+            <ul class="mb-0">
+              <li>Tổng số vector mẫu: {{ lsh_results.stats.total_vectors }}</li>
+              <li>Tổng số truy vấn: {{ lsh_results.stats.total_queries }}</li>
+              <li>Độ tương đồng trung bình: {{ lsh_results.stats.avg_similarity }}</li>
+              <li>Tỷ lệ ứng viên: {{ lsh_results.stats.candidates_ratio }}</li>
+              <li>Số collision trung bình: {{ lsh_results.stats.avg_collisions }}</li>
+            </ul>
+            <h6 class="mt-2">Thông tin truy vấn:</h6>
+            <ul class="mb-0">
+              <li>Thời gian xử lý: {{ lsh_results.query_info.processing_time }} giây</li>
+              <li>Số ứng viên tìm thấy: {{ lsh_results.query_info.candidates_found }}</li>
+              <li>Tỷ lệ ứng viên: {{ lsh_results.query_info.candidates_ratio }}</li>
+            </ul>
+            {% if lsh_results.stats.total_processing_time %}
+            <h6 class="mt-2">Thống kê xử lý:</h6>
+            <ul class="mb-0">
+              <li>Tổng thời gian xử lý: {{ lsh_results.stats.total_processing_time }} giây</li>
+              <li>Thời gian xử lý trung bình: {{ lsh_results.stats.avg_processing_time }} giây</li>
+              <li>Bộ nhớ sử dụng trung bình: {{ lsh_results.stats.avg_memory_usage }} MB</li>
+            </ul>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% if error %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endif %}
+    </div>
+
+    <!-- Add progress bar -->
+    <div class="progress mb-3" style="display: none;">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+    </div>
+
+    <!-- Add JavaScript for progress bar -->
+    <script>
+    function updateProgress(progress) {
+      const progressBar = document.querySelector('.progress');
+      const progressBarInner = progressBar.querySelector('.progress-bar');
+      progressBar.style.display = 'block';
+      progressBarInner.style.width = progress + '%';
+      progressBarInner.textContent = Math.round(progress) + '%';
+      
+      if (progress >= 100) {
+        setTimeout(() => {
+          progressBar.style.display = 'none';
+        }, 1000);
+      }
+    }
+
+    // Add event listeners for file inputs
+    document.querySelectorAll('input[type="file"]').forEach(input => {
+      input.addEventListener('change', function() {
+        if (this.files.length > 0) {
+          const file = this.files[0];
+          const size = file.size / 1024 / 1024; // Convert to MB
+          if (size > 10) {
+            alert('File quá lớn (>10MB). Vui lòng chọn file nhỏ hơn hoặc sử dụng tính năng xử lý batch.');
+          }
+        }
+      });
+    });
+
+    function toggleDataSource(val) {
+      document.querySelectorAll('.data-source').forEach(el => el.style.display = 'none');
+      if (val === 'text' || val === 'vector') {
+        if(document.getElementById('vectorInput')) document.getElementById('vectorInput').style.display = '';
+        if(document.getElementById('textInput')) document.getElementById('textInput').style.display = '';
+      }
+      if (val === 'file') {
+        if(document.getElementById('fileInputLSH')) document.getElementById('fileInputLSH').style.display = '';
+        if(document.getElementById('fileInput')) document.getElementById('fileInput').style.display = '';
+      }
+      if (val === 'sample') {
+        if(document.getElementById('sampleInput')) document.getElementById('sampleInput').style.display = '';
+      }
+      if (val === 'api') {
+        if(document.getElementById('apiInput')) document.getElementById('apiInput').style.display = '';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const selects = document.querySelectorAll('select[name="data_source"]');
+      selects.forEach(select => {
+        toggleDataSource(select.value);
+        select.addEventListener('change', function() {
+          toggleDataSource(this.value);
+        });
+      });
+    });
+    </script>
+
+    <!-- Add custom CSS for progress bar -->
+    <style>
+    .progress {
+      height: 20px;
+      margin-bottom: 20px;
+    }
+    .progress-bar {
+      transition: width 0.3s ease;
+    }
+    </style>
+
+    <div class="text-center mt-4">
+      <a href="/" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Quay lại trang chủ</a>
+    </div>
+  </div>
+</div>
+{% endblock %} 

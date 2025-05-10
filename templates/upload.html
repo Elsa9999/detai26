@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card shadow-sm">
+      <div class="card-header">Upload CSV &amp; Realistic Benchmark</div>
+      <div class="card-body">
+        <form method="post"
+              enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="datafile" class="form-label">
+              CSV file (<code>key,value</code> pairs)
+            </label>
+            <input type="file"
+                   id="datafile"
+                   name="datafile"
+                   accept=".csv"
+                   class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Chọn thuật toán (có thể chọn nhiều)</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="algorithms" value="chaining" id="alg_chaining" checked>
+              <label class="form-check-label" for="alg_chaining">Chaining</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="algorithms" value="open_double" id="alg_open_double" checked>
+              <label class="form-check-label" for="alg_open_double">Open Addressing (Double Hashing)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="algorithms" value="linear" id="alg_linear">
+              <label class="form-check-label" for="alg_linear">Open Addressing (Linear Probing)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="algorithms" value="quadratic" id="alg_quadratic">
+              <label class="form-check-label" for="alg_quadratic">Open Addressing (Quadratic Probing)</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="table_size_exp" class="form-label">
+              Table size exponent (2^exp)
+            </label>
+            <input type="number"
+                   id="table_size_exp"
+                   name="table_size_exp"
+                   class="form-control"
+                   value="22"
+                   min="4" max="28" />
+          </div>
+          <div class="mb-3">
+            <label for="chunksize" class="form-label">
+              Chunk size
+            </label>
+            <input type="number"
+                   id="chunksize"
+                   name="chunksize"
+                   class="form-control"
+                   value="1000000"
+                   min="1" />
+          </div>
+          <button type="submit"
+                  class="btn btn-primary w-100">
+            Upload &amp; Run Benchmark
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

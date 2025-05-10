@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card mx-auto mt-4" style="max-width: 800px;">
+  <div class="card-header">CRUD Demo</div>
+  <div class="card-body">
+    <form method="post" class="row gy-2">
+      <div class="col-md-3">
+        <label class="form-label">Algorithm</label>
+        <select name="algorithm" class="form-select">
+          <option value="chaining">Chaining</option>
+          <option value="open_double">Open Addressing (Double)</option>
+          <option value="linear">Linear Probing</option>
+          <option value="quadratic">Open Addressing (Quadratic Probing)</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Key</label>
+        <input name="key" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Value</label>
+        <input name="value" class="form-control">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Action</label>
+        <select name="crud_action" class="form-select">
+          <option value="insert">Insert/Update</option>
+          <option value="search">Search</option>
+          <option value="delete">Delete</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </div>
+    </form>
+
+    {% with messages = get_flashed_messages(category_filter=['crud']) %}
+      {% if messages %}
+        {% for msg in messages %}
+          <div class="alert alert-success mt-3">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <hr>
+    <h5>Current Tables State:</h5>
+    {% for name, table in tables.items() %}
+      <h6>{{ name }}</h6>
+      <pre>{{ table }}</pre>
+    {% else %}
+      <p>No tables instantiated yet.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

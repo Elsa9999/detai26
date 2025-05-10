@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card mx-auto mt-4" style="max-width: 900px;">
+  <div class="card-header bg-primary text-white">
+    <h4 class="mb-0">Giới thiệu &amp; Hướng dẫn sử dụng</h4>
+  </div>
+  <div class="card-body">
+    <h5 class="mb-3">Đề tài:</h5>
+    <p><b>Triển Khai Thuật Toán Hash Table với Collision Resolution cho Xử Lý Dữ Liệu Lớn trong AI</b></p>
+    <h5 class="mb-3">Tác giả:</h5>
+    <ul>
+      <li>Liên Gia Bảo</li>
+      <li>Trần Phước Lợi</li>
+    </ul>
+    <h5 class="mb-3">Hướng dẫn sử dụng:</h5>
+    <ol>
+      <li><b>Synthetic Benchmark:</b> Chọn số lượng phần tử, thuật toán hash, nhấn "Run Synthetic" để so sánh hiệu năng các thuật toán.</li>
+      <li><b>Realistic Benchmark:</b> Upload file CSV (key,value), chọn thuật toán, nhấn "Upload & Run Benchmark" để đo hiệu năng trên dữ liệu thực tế.</li>
+      <li><b>Fast Feature Map:</b> Nhập chuỗi text, chọn thuật toán hash, nhấn "Vectorize" để xem ánh xạ feature → id và vector 1-hot.</li>
+      <li><b>CRUD Demo:</b> Thực hành Insert/Search/Delete trực tiếp trên các hash table.</li>
+      <li><b>Xuất kết quả:</b> Sau khi benchmark, nhấn "Xuất CSV" để tải về kết quả so sánh.</li>
+    </ol>
+    <div class="text-center">
+      <a href="/" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Quay lại trang chủ</a>
+    </div>
+  </div>
+</div>
+{% endblock %} 

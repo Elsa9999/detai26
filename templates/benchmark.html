@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h2 class="mb-4">Benchmark Results</h2>
+  
+  {% if results %}
+  <div class="card shadow-sm mb-4">
+    <div class="card-header">
+      <h5 class="mb-0">Parameters</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <p><strong>Number of items:</strong> {{ results.n_items }}</p>
+        </div>
+        <div class="col-md-4">
+          <p><strong>Table size:</strong> {{ results.table_size }}</p>
+        </div>
+        <div class="col-md-4">
+          <p><strong>Algorithms:</strong> {{ results.algorithms|join(', ') }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow-sm mb-4">
+    <div class="card-header">
+      <h5 class="mb-0">Results</h5>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Algorithm</th>
+              <th>Insert Time (ms)</th>
+              <th>Search Time (ms)</th>
+              <th>Memory Usage (MB)</th>
+              <th>Load Factor</th>
+              <th>Avg Insert Probe</th>
+              <th>Avg Search Probe</th>
+              <th>Collisions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for algo in results.algorithms %}
+            <tr>
+              <td>{{ algo }}</td>
+              <td>{{ results.insert_times[algo]|default('N/A') }}</td>
+              <td>{{ results.search_times[algo]|default('N/A') }}</td>
+              <td>{{ results.memories[algo]|default('N/A') }}</td>
+              <td>{{ results.load_factors[algo]|default('N/A') }}</td>
+              <td>{{ results.avg_insert_probe[algo]|default('N/A') }}</td>
+              <td>{{ results.avg_search_probe[algo]|default('N/A') }}</td>
+              <td>{{ results.collisions[algo]|default('N/A') }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow-sm">
+    <div class="card-header">
+      <h5 class="mb-0">Performance Chart</h5>
+    </div>
+    <div class="card-body">
+      <canvas id="benchmarkChart" 
+              data-methods='{{ results.chart_data.methods|tojson }}'
+              data-insert-times='{{ results.chart_data.insert_times|tojson }}'
+              data-search-times='{{ results.chart_data.search_times|tojson }}'
+              data-memories='{{ results.chart_data.memories|tojson }}'>
+      </canvas>
+    </div>
+  </div>
+  {% else %}
+  <div class="alert alert-info">
+    No benchmark results available. Please run a benchmark first.
+  </div>
+  {% endif %}
+
+  <div class="mt-4">
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Home</a>
+  </div>
+</div>
+{% endblock %}

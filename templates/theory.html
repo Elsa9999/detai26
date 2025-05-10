@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card mx-auto mt-4" style="max-width: 1000px;">
+  <div class="card-header bg-primary text-white">
+    <h4 class="mb-0">Lý thuyết & Ứng dụng Hash Table</h4>
+  </div>
+  <div class="card-body">
+    <!-- Lý thuyết cơ bản -->
+    <h5 class="mb-3">1. Lý thuyết Hash Table</h5>
+    <div class="mb-4">
+      <h6>1.1. Nguyên lý hoạt động</h6>
+      <ul>
+        <li>Hash table là cấu trúc dữ liệu lưu trữ dạng key-value</li>
+        <li>Sử dụng hàm băm (hash function) để ánh xạ key thành index</li>
+        <li>Độ phức tạp trung bình: O(1) cho search/insert/delete</li>
+      </ul>
+
+      <h6>1.2. Các phương pháp xử lý collision</h6>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Phương pháp</th>
+              <th>Ưu điểm</th>
+              <th>Nhược điểm</th>
+              <th>Độ phức tạp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Chaining</td>
+              <td>- Dễ triển khai<br>- Không giới hạn số lượng phần tử</td>
+              <td>- Tốn bộ nhớ cho con trỏ<br>- Cache không hiệu quả</td>
+              <td>O(1 + α)</td>
+            </tr>
+            <tr>
+              <td>Linear Probing</td>
+              <td>- Cache hiệu quả<br>- Ít tốn bộ nhớ</td>
+              <td>- Dễ bị clustering<br>- Cần resize table</td>
+              <td>O(1/(1-α))</td>
+            </tr>
+            <tr>
+              <td>Double Hashing</td>
+              <td>- Giảm clustering<br>- Phân bố đều</td>
+              <td>- Tính toán phức tạp<br>- Cần 2 hàm băm</td>
+              <td>O(1/(1-α))</td>
+            </tr>
+            <tr>
+              <td>Quadratic Probing</td>
+              <td>- Giảm clustering<br>- Cache tốt</td>
+              <td>- Có thể không tìm thấy slot<br>- Cần resize</td>
+              <td>O(1/(1-α))</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Ứng dụng trong AI/ML -->
+    <h5 class="mb-3">2. Ứng dụng trong AI/ML</h5>
+    <div class="mb-4">
+      <h6>2.1. Feature Hashing (Hashing Trick)</h6>
+      <ul>
+        <li>Chuyển đổi text thành vector số học</li>
+        <li>Giảm chiều dữ liệu mà vẫn giữ thông tin quan trọng</li>
+        <li>Ứng dụng: Text classification, Spam detection</li>
+      </ul>
+
+      <h6>2.2. Locality Sensitive Hashing (LSH)</h6>
+      <ul>
+        <li>Tìm kiếm các vector tương tự nhanh chóng</li>
+        <li>Ứng dụng: Image search, Document similarity</li>
+        <li>Độ phức tạp: O(1) thay vì O(n)</li>
+      </ul>
+
+      <h6>2.3. Bloom Filter</h6>
+      <ul>
+        <li>Kiểm tra membership với bộ nhớ tối thiểu</li>
+        <li>Ứng dụng: Cache filtering, Duplicate detection</li>
+        <li>False positive có thể chấp nhận được</li>
+      </ul>
+    </div>
+
+    <!-- Xử lý dữ liệu lớn -->
+    <h5 class="mb-3">3. Xử lý dữ liệu lớn</h5>
+    <div class="mb-4">
+      <h6>3.1. Distributed Hash Tables</h6>
+      <ul>
+        <li>Phân tán dữ liệu trên nhiều máy</li>
+        <li>Load balancing tự động</li>
+        <li>Fault tolerance cao</li>
+      </ul>
+
+      <h6>3.2. Memory Optimization</h6>
+      <ul>
+        <li>Compact hash table</li>
+        <li>Custom allocator</li>
+        <li>Memory pooling</li>
+      </ul>
+
+      <h6>3.3. Performance Tuning</h6>
+      <ul>
+        <li>Cache-friendly data layout</li>
+        <li>SIMD optimization</li>
+        <li>Lock-free concurrent access</li>
+      </ul>
+    </div>
+
+    <!-- So sánh với các cấu trúc khác -->
+    <h5 class="mb-3">4. So sánh với các cấu trúc dữ liệu khác</h5>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Cấu trúc</th>
+            <th>Search</th>
+            <th>Insert</th>
+            <th>Delete</th>
+            <th>Memory</th>
+            <th>Ứng dụng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hash Table</td>
+            <td>O(1)</td>
+            <td>O(1)</td>
+            <td>O(1)</td>
+            <td>Trung bình</td>
+            <td>Key-value storage</td>
+          </tr>
+          <tr>
+            <td>B-tree</td>
+            <td>O(log n)</td>
+            <td>O(log n)</td>
+            <td>O(log n)</td>
+            <td>Thấp</td>
+            <td>Database index</td>
+          </tr>
+          <tr>
+            <td>Skip List</td>
+            <td>O(log n)</td>
+            <td>O(log n)</td>
+            <td>O(log n)</td>
+            <td>Cao</td>
+            <td>Concurrent access</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="/" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Quay lại trang chủ</a>
+    </div>
+  </div>
+</div>
+{% endblock %} 

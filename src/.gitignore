@@ -1,0 +1,19 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+
+# Logs
+*.log
+app.log
+
+# Uploads / user data
+uploads/
+
+# OS files
+Thumbs.db
+.DS_Store
