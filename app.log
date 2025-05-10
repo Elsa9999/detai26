@@ -4667,3 +4667,638 @@ ModuleNotFoundError: No module named 'psutil'
  * Running on http://127.0.0.1:5000
 2025-05-10 17:44:26,501 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
 2025-05-10 17:44:26,503 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:34:18,873 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:34:18,877 - src.ai_demo - ERROR - Lỗi khi thêm vector: No module named 'psutil'
+2025-05-10 20:34:18,879 - src.ai_demo - ERROR - Traceback (most recent call last):
+  File "D:\doanCTDL-main\src\ai_demo.py", line 647, in add_vector
+    self.stats['memory_usage'].append(self._get_memory_usage())
+                                      ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\doanCTDL-main\src\ai_demo.py", line 625, in _get_memory_usage
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+
+2025-05-10 20:35:51,186 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:35:51,190 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:35:51,190 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:35:51,190 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:35:51,210 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:35:51,210 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:35:51,210 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:35:51,246 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:35:53,081 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:35:53,082 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:35:53,083 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:35:53,083 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:35:53,097 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:35:53,098 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:35:53,098 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:35:53,121 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:35:53,126 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:35:54,009 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:37:06,541 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:37:06,543 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:37:06,543 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:37:06,543 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:37:06,558 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:37:06,559 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:37:06,559 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:37:06,592 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:37:08,071 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:37:08,072 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:37:08,073 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:37:08,073 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:37:08,085 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:37:08,086 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:37:08,086 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:37:08,107 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:37:08,111 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:37:08,548 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:37:24,574 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:24] "GET / HTTP/1.1" 200 -
+2025-05-10 20:37:24,776 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:37:24,777 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:24] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:37:25,215 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-10 20:37:27,120 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:27] "[33mGET /upload HTTP/1.1[0m" 404 -
+2025-05-10 20:37:31,283 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:31] "POST /feature_map HTTP/1.1" 200 -
+2025-05-10 20:37:31,386 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:37:31,391 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:31] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:37:35,604 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:35] "GET / HTTP/1.1" 200 -
+2025-05-10 20:37:35,696 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:37:35,698 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:35] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:37:36,894 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:36] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:37:37,000 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:37:37,001 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:37] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:37:39,618 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:39] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:37:39,625 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:39] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:37:39,740 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:37:39,759 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:39] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:37:45,684 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:45] "POST /benchmark HTTP/1.1" 200 -
+2025-05-10 20:37:45,784 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:37:45,786 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:37:45] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:38:00,339 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:00] "POST /benchmark HTTP/1.1" 200 -
+2025-05-10 20:38:00,437 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:38:00,439 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:00] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:38:10,965 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:10] "GET / HTTP/1.1" 200 -
+2025-05-10 20:38:11,082 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:38:11,083 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:11] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:38:12,469 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:12] "[33mGET /upload HTTP/1.1[0m" 404 -
+2025-05-10 20:38:15,167 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:15] "GET /about HTTP/1.1" 200 -
+2025-05-10 20:38:15,259 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:38:15,261 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:15] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:38:17,249 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:17] "GET /theory HTTP/1.1" 200 -
+2025-05-10 20:38:17,341 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:38:17,344 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:17] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:38:22,221 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:22] "GET /ai_demo HTTP/1.1" 200 -
+2025-05-10 20:38:22,308 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:38:22,310 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:22] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:38:23,348 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:23] "POST /ai_demo/create_data HTTP/1.1" 200 -
+2025-05-10 20:38:23,456 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:38:23,457 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:23] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:38:29,375 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:29] "GET /about HTTP/1.1" 200 -
+2025-05-10 20:38:29,478 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:38:29,480 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:29] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:38:30,051 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:30] "GET / HTTP/1.1" 200 -
+2025-05-10 20:38:30,147 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:38:30,148 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:30] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:38:59,578 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:38:59] "[33mGET /upload HTTP/1.1[0m" 404 -
+2025-05-10 20:40:10,557 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:40:10,558 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:10,559 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:10,559 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:10,574 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:10,574 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:10,575 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:10,603 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:40:12,052 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:40:12,053 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:12,053 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:12,054 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:12,066 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:12,066 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:12,066 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:12,089 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:40:12,094 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:40:12,457 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:40:14,068 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:14] "GET / HTTP/1.1" 200 -
+2025-05-10 20:40:14,249 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:40:14,250 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:14] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:40:16,542 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:16] "[35m[1mGET /upload_file HTTP/1.1[0m" 500 -
+2025-05-10 20:40:16,690 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:16] "GET /upload_file?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-10 20:40:16,703 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:16] "GET /upload_file?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-10 20:40:16,758 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:16] "GET /upload_file?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-10 20:40:16,758 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:16] "GET /upload_file?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-05-10 20:40:16,825 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:16] "GET /upload_file?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-10 20:40:43,814 - werkzeug - INFO -  * Detected change in 'D:\\doanCTDL-main\\app.py', reloading
+2025-05-10 20:40:44,086 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:40:46,065 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:40:46,066 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:46,066 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:46,067 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:46,083 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:46,084 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:46,084 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:46,111 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:40:46,116 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:40:46,615 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:40:55,395 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:40:55,396 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:55,396 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:55,397 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:55,408 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:55,409 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:55,409 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:55,450 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:40:56,906 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:40:56,908 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:56,908 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:56,908 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:56,919 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:40:56,919 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:40:56,919 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:40:56,943 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:40:56,946 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:40:57,324 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:40:58,632 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:58] "GET / HTTP/1.1" 200 -
+2025-05-10 20:40:58,810 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:40:58,811 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:58] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:40:59,774 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:59] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:40:59,886 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:40:59,889 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:40:59] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:41:05,092 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:41:05] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:41:05,101 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:41:05] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:41:05,232 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:41:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:41:05,232 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:41:05] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:41:57,889 - werkzeug - INFO -  * Detected change in 'D:\\doanCTDL-main\\app.py', reloading
+2025-05-10 20:41:58,139 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:41:59,994 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:41:59,996 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:41:59,996 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:41:59,996 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:42:00,017 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:42:00,018 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:42:00,018 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:42:00,051 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:42:00,055 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:42:00,460 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:42:04,813 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:42:04,814 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:42:04,814 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:42:04,814 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:42:04,826 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:42:04,826 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:42:04,826 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:42:04,852 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:42:06,344 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:42:06,345 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:42:06,345 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:42:06,346 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:42:06,357 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:42:06,357 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:42:06,358 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:42:06,378 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:42:06,381 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:42:06,752 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:42:08,087 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:08] "GET / HTTP/1.1" 200 -
+2025-05-10 20:42:08,417 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:08] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:42:08,417 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:42:09,695 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:09] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:42:09,828 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:42:09,832 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:09] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:42:13,676 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:13] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:42:13,693 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:13] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:42:13,835 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:42:13,836 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:13] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:42:14,808 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:14] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:42:14,820 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:14] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:42:14,935 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:42:14,936 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:14] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:42:15,443 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:15] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:42:15,450 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:15] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:42:15,556 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:42:15,557 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:42:15] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:43:38,598 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:43:38,599 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:43:38,600 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:43:38,600 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:43:38,625 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:43:38,625 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:43:38,626 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:43:38,669 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:43:40,467 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:43:40,468 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:43:40,468 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:43:40,469 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:43:40,481 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:43:40,482 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:43:40,482 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:43:45,883 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:43:45,883 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:43:45,884 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:43:45,884 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:43:45,895 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:43:45,895 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:43:45,895 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:43:45,916 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:43:47,409 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:43:47,410 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:43:47,410 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:43:47,410 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:43:47,421 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:43:47,422 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:43:47,422 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:43:47,445 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:43:47,449 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:43:47,827 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:43:50,437 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:50] "GET / HTTP/1.1" 200 -
+2025-05-10 20:43:50,679 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:50] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:43:50,680 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:43:51,840 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:51] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:43:51,956 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:43:51,962 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:51] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:43:56,698 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:56] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:43:56,712 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:56] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:43:56,864 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:43:56,865 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:43:56] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:46:45,834 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:46:45] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:46:45,845 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:46:45] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:46:45,985 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:46:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:46:45,986 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:46:45] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:46:47,100 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:46:47] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:46:47,113 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:46:47] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:46:47,246 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:46:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:46:47,247 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:46:47] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:46:52,468 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:46:52,469 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:46:52,470 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:46:52,470 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:46:52,484 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:46:52,484 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:46:52,484 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:46:52,516 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:46:53,917 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:46:53,918 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:46:53,918 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:46:53,919 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:46:53,929 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:46:53,930 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:46:53,930 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:46:53,950 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:46:53,962 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:46:54,355 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:47:03,053 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:03] "GET / HTTP/1.1" 200 -
+2025-05-10 20:47:03,265 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:03] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:47:03,265 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:47:04,346 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:04] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:47:04,447 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:47:04,448 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:04] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:47:07,991 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:07] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:47:07,998 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:07] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:47:08,148 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:47:08,150 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:08] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:47:41,899 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:41] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:47:41,907 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:41] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:47:42,070 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:47:42,071 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:47:42] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:48:33,190 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:48:33,191 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:48:33,191 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:48:33,191 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:48:33,203 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:48:33,203 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:48:33,203 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:48:33,229 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:48:34,674 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:48:34,675 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:48:34,676 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:48:34,676 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:48:34,688 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:48:34,688 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:48:34,688 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:48:34,711 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:48:34,715 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:48:35,082 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:48:36,594 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:36] "GET / HTTP/1.1" 200 -
+2025-05-10 20:48:36,834 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:48:36,834 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:36] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:48:37,704 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:37] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:48:37,813 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:48:37,817 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:37] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:48:54,657 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:54] "[32mPOST /upload_file HTTP/1.1[0m" 302 -
+2025-05-10 20:48:54,664 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:54] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:48:54,787 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:48:54,808 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:48:54] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:49:30,657 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:49:30,658 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:49:30,658 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:49:30,658 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:49:30,670 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:49:30,670 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:49:30,670 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:49:30,694 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:49:32,149 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:49:32,150 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:49:32,150 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:49:32,151 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:49:32,162 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:49:32,162 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:49:32,162 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:49:32,186 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:49:32,189 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:49:32,563 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:49:34,385 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:34] "GET / HTTP/1.1" 200 -
+2025-05-10 20:49:34,671 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:49:34,678 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:34] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:49:35,743 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:35] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:49:35,869 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:49:35,872 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:35] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:49:41,888 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:41] "POST /upload_file HTTP/1.1" 200 -
+2025-05-10 20:49:41,975 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:49:41,977 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:41] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:49:47,897 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:47] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:49:53,615 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:53] "POST /upload_file HTTP/1.1" 200 -
+2025-05-10 20:49:53,707 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:49:53,708 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:49:53] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:01,092 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:01] "GET / HTTP/1.1" 200 -
+2025-05-10 20:50:01,158 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:01,183 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:01] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:01,198 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:01] "GET / HTTP/1.1" 200 -
+2025-05-10 20:50:01,284 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:01,286 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:01] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:03,717 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:03] "POST /feature_map HTTP/1.1" 200 -
+2025-05-10 20:50:03,817 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:03,820 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:03] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:07,345 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:07] "GET /feature_map?text=b+n+m+j+h+v&method=open_double HTTP/1.1" 200 -
+2025-05-10 20:50:07,439 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:07,442 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:07] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:09,453 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:09] "GET /feature_map?text=b+n+m+j+h+v&method=linear HTTP/1.1" 200 -
+2025-05-10 20:50:09,552 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:09,554 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:09] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:11,316 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:11] "GET /feature_map?text=b+n+m+j+h+v&method=quadratic HTTP/1.1" 200 -
+2025-05-10 20:50:11,422 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:11,424 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:11] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:11,608 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:11] "GET /feature_map?text=b+n+m+j+h+v&method=quadratic HTTP/1.1" 200 -
+2025-05-10 20:50:11,695 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:11,696 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:11] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:13,001 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:13] "GET / HTTP/1.1" 200 -
+2025-05-10 20:50:13,100 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:13,103 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:13] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:14,180 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:14] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:14,256 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:14,276 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:14] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:16,224 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:16] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:50:16,232 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:16] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:16,373 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:16,374 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:16] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:19,237 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:19] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:50:19,248 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:19] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:19,388 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:19,389 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:19] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:22,392 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:22] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:50:22,401 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:22] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:22,541 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:22,541 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:22] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:25,952 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:25] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:50:25,971 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:25] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:26,104 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:26,105 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:26] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:32,096 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:32] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:50:32,103 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:32] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:32,260 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:32,260 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:32] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:34,314 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:34] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:50:34,323 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:34] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:34,463 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:34,464 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:34] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:42,439 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:42] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:50:42,446 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:42] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:42,574 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:42,576 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:42] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:46,306 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:46] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:50:46,314 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:46] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:46,458 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:46,460 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:46] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:53,218 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:53] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:50:53,227 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:53] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:50:53,389 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:53,389 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:53] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:50:57,011 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:57] "GET / HTTP/1.1" 200 -
+2025-05-10 20:50:57,116 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:50:57,117 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:50:57] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:51:00,452 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:00] "POST /benchmark HTTP/1.1" 200 -
+2025-05-10 20:51:00,559 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:51:00,561 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:00] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:51:03,716 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:03] "GET /ai_demo HTTP/1.1" 200 -
+2025-05-10 20:51:03,814 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:51:03,815 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:03] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:51:06,858 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:06] "POST /ai_demo/create_data HTTP/1.1" 200 -
+2025-05-10 20:51:06,921 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:51:06,943 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:06] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:51:09,696 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:09] "GET /ai_demo HTTP/1.1" 200 -
+2025-05-10 20:51:09,843 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:51:09,847 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:09] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:51:18,435 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:18] "GET / HTTP/1.1" 200 -
+2025-05-10 20:51:18,531 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:51:18,533 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:51:18] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:54:05,368 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:05] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:54:05,487 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:54:05,496 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:05] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:54:11,616 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:11] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:54:11,625 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:11] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:54:11,764 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:54:11,764 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:11] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:54:19,549 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:19] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:54:19,557 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:19] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:54:19,690 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:54:19,691 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:54:19] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:56:08,602 - werkzeug - INFO -  * Detected change in 'D:\\doanCTDL-main\\app.py', reloading
+2025-05-10 20:56:08,840 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:56:11,043 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:56:11,044 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:56:11,045 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:56:11,045 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:56:11,060 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:56:11,060 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:56:11,060 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:56:11,085 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:56:11,089 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:56:11,494 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:56:23,533 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:56:23,535 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:56:23,536 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:56:23,536 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:56:23,551 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:56:23,551 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:56:23,551 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:56:23,587 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 20:56:25,081 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 20:56:25,082 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:56:25,083 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:56:25,083 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:56:25,095 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 20:56:25,095 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 20:56:25,095 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 20:56:25,117 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 20:56:25,121 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 20:56:25,496 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 20:56:27,240 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:27] "GET / HTTP/1.1" 200 -
+2025-05-10 20:56:27,518 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:56:27,520 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:27] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:56:29,319 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:29] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:56:29,426 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:56:29,431 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:29] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:56:31,720 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:31] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:56:31,728 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:31] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:56:31,857 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:56:31,857 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:31] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:56:34,888 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:34] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:56:34,897 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:34] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:56:35,035 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:56:35,036 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:35] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:56:41,224 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:41] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:56:41,234 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:41] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:56:41,368 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:56:41,369 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:41] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:56:45,155 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:45] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:56:45,163 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:45] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:56:45,304 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:56:45,305 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:45] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:56:49,536 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:49] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 20:56:49,544 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:49] "GET /crud HTTP/1.1" 200 -
+2025-05-10 20:56:49,676 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:56:49,677 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:49] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:56:51,285 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:51] "GET / HTTP/1.1" 200 -
+2025-05-10 20:56:51,391 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:56:51,394 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:51] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:56:56,308 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:56] "GET /ai_demo HTTP/1.1" 200 -
+2025-05-10 20:56:56,404 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:56:56,406 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:56:56] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:57:00,960 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:00] "POST /ai_demo/lsh HTTP/1.1" 200 -
+2025-05-10 20:57:01,095 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:57:01,097 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:01] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:57:05,349 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:05] "POST /ai_demo/lsh HTTP/1.1" 200 -
+2025-05-10 20:57:05,425 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:57:05,427 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:05] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:57:12,665 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:12] "POST /ai_demo/lsh HTTP/1.1" 200 -
+2025-05-10 20:57:12,750 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:57:12,755 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:12] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:57:44,221 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:44] "POST /ai_demo/feature_hash HTTP/1.1" 200 -
+2025-05-10 20:57:44,334 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:57:44,336 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:57:44] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:58:41,312 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:41] "POST /ai_demo/create_data HTTP/1.1" 200 -
+2025-05-10 20:58:41,418 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:58:41,421 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:41] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:58:44,186 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:44] "GET / HTTP/1.1" 200 -
+2025-05-10 20:58:44,287 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:58:44,288 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:44] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:58:44,912 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:44] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 20:58:45,009 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:58:45,009 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:45] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:58:52,016 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:52] "POST /upload_file HTTP/1.1" 200 -
+2025-05-10 20:58:52,113 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:58:52,116 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:52] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:58:58,547 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:58] "GET / HTTP/1.1" 200 -
+2025-05-10 20:58:58,639 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:58:58,642 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:58:58] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:59:00,706 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:59:00] "POST /benchmark HTTP/1.1" 200 -
+2025-05-10 20:59:00,818 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:59:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:59:00,820 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:59:00] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 20:59:05,723 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:59:05] "GET / HTTP/1.1" 200 -
+2025-05-10 20:59:05,819 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:59:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 20:59:05,821 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 20:59:05] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:00:52,080 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 21:00:52,081 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 21:00:52,081 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 21:00:52,082 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 21:00:52,092 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 21:00:52,093 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 21:00:52,093 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 21:00:52,117 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 21:00:53,537 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 21:00:53,538 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 21:00:53,539 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 21:00:53,539 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 21:00:53,549 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 21:00:53,550 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 21:00:53,550 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 21:00:53,572 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 21:00:53,575 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 21:00:53,979 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 21:00:55,757 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:00:55] "GET / HTTP/1.1" 200 -
+2025-05-10 21:00:56,041 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:00:56] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:00:56,041 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:00:56] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-05-10 21:00:58,245 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:00:58] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 21:00:58,358 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:00:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:00:58,368 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:00:58] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:01:06,673 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:06] "POST /upload_file HTTP/1.1" 200 -
+2025-05-10 21:01:06,797 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:01:06,799 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:06] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:01:10,042 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:10] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 21:01:10,134 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:01:10,137 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:10] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:01:11,080 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:11] "GET / HTTP/1.1" 200 -
+2025-05-10 21:01:11,183 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:01:11,185 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:11] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:01:13,052 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:13] "GET /crud HTTP/1.1" 200 -
+2025-05-10 21:01:13,142 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:01:13,144 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:13] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:01:15,985 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:15] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 21:01:15,993 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:15] "GET /crud HTTP/1.1" 200 -
+2025-05-10 21:01:16,133 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:01:16,134 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:16] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:01:18,243 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:18] "GET / HTTP/1.1" 200 -
+2025-05-10 21:01:18,342 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:01:18,344 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:01:18] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:02:15,593 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 21:02:15,594 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 21:02:15,594 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 21:02:15,595 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 21:02:15,606 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 21:02:15,606 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 21:02:15,606 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 21:02:15,631 - werkzeug - INFO -  * Restarting with stat
+2025-05-10 21:02:17,030 - src.ai_demo - INFO - Đã tạo thư mục dữ liệu mẫu: D:\doanCTDL-main\data\samples
+2025-05-10 21:02:17,031 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 21:02:17,031 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 21:02:17,032 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 21:02:17,043 - src.ai_demo - INFO - Đã thêm vector vec1 vào LSH
+2025-05-10 21:02:17,043 - src.ai_demo - INFO - Đã thêm vector vec2 vào LSH
+2025-05-10 21:02:17,043 - src.ai_demo - INFO - Đã thêm vector vec3 vào LSH
+2025-05-10 21:02:17,064 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 21:02:17,067 - werkzeug - INFO -  * Debugger PIN: 629-444-888
+2025-05-10 21:02:17,438 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-05-10 21:02:19,005 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:19] "GET / HTTP/1.1" 200 -
+2025-05-10 21:02:19,269 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:19] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:02:19,270 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:19] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-05-10 21:02:20,638 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:20] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 21:02:20,769 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:02:20,778 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:20] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:02:28,110 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:28] "POST /upload_file HTTP/1.1" 200 -
+2025-05-10 21:02:28,203 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:02:28,206 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:28] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:02:30,732 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:30] "GET / HTTP/1.1" 200 -
+2025-05-10 21:02:30,845 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:02:30,847 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:30] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:02:31,953 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:31] "GET /crud HTTP/1.1" 200 -
+2025-05-10 21:02:32,052 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:02:32,053 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:32] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:02:34,782 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:34] "[32mPOST /crud HTTP/1.1[0m" 302 -
+2025-05-10 21:02:34,791 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:34] "GET /crud HTTP/1.1" 200 -
+2025-05-10 21:02:34,942 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:02:34,942 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:34] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:02:37,419 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:37] "GET / HTTP/1.1" 200 -
+2025-05-10 21:02:37,498 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:02:37,498 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:37] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:02:40,940 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:40] "POST /benchmark HTTP/1.1" 200 -
+2025-05-10 21:02:41,024 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:02:41,026 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:02:41] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:03:20,269 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:20] "GET / HTTP/1.1" 200 -
+2025-05-10 21:03:20,415 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:03:20,417 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:20] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:03:21,651 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:21] "GET /upload_file HTTP/1.1" 200 -
+2025-05-10 21:03:21,794 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:03:21,797 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:21] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:03:28,586 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:28] "POST /upload_file HTTP/1.1" 200 -
+2025-05-10 21:03:28,697 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:03:28,698 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:28] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -
+2025-05-10 21:03:31,609 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:31] "GET / HTTP/1.1" 200 -
+2025-05-10 21:03:31,720 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-05-10 21:03:31,721 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 21:03:31] "[36mGET /static/js/chart.js HTTP/1.1[0m" 304 -

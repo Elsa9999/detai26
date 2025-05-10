@@ -248,20 +248,41 @@ def crud():
         val = request.form.get('value', '')
         act = request.form['crud_action']
 
-        if algo not in tables:
-            tables[algo] = new_table(algo)
-        tbl = tables[algo]
+        try:
+            if algo not in tables:
+                tables[algo] = new_table(algo)
+            tbl = tables[algo]
 
-        if act == 'insert':
-            v = int(val) if val.isdigit() else val
-            tbl.insert(key, v)
-            flash(f"Inserted '{key}' → {v}", 'success')
-        elif act == 'search':
-            r = tbl.search(key)
-            flash(f"{'Found: '+str(r) if r is not None else 'Not found'}", 'info')
-        elif act == 'delete':
-            r = tbl.delete(key)
-            flash(f"{'Deleted' if r is not None else 'Key not found'}", 'warning')
+            if act == 'insert':
+                v = int(val) if val.isdigit() else val
+                # Kiểm tra key đã tồn tại chưa (nếu muốn)
+                try:
+                    tbl.insert(key, v)
+                    flash(f"Inserted '{key}' → {v}", 'success')
+                except Exception as e:
+                    flash(f"Insert failed: {str(e)}", 'danger')
+            elif act == 'search':
+                try:
+                    r = tbl.search(key)
+                    if r is not None:
+                        flash(f"Found: {r}", 'info')
+                    else:
+                        flash(f"Not found: '{key}'", 'warning')
+                except Exception as e:
+                    flash(f"Search failed: {str(e)}", 'danger')
+            elif act == 'delete':
+                try:
+                    r = tbl.delete(key)
+                    if r is not None:
+                        flash(f"Deleted '{key}'", 'success')
+                    else:
+                        flash(f"Key '{key}' not found for deletion", 'warning')
+                except Exception as e:
+                    flash(f"Delete failed: {str(e)}", 'danger')
+            else:
+                flash(f"Unknown action: {act}", 'danger')
+        except Exception as e:
+            flash(f"Operation failed: {str(e)}", 'danger')
 
         return redirect(url_for('crud'))
 
@@ -552,13 +573,17 @@ def cuckoo_reset():
 def upload_file():
     if request.method == 'POST':
         try:
+            print("Received POST request")
             f = request.files.get('datafile')
+            print(f"File received: {f.filename if f else 'None'}")
             algos = request.form.getlist('algorithms')
+            print(f"Selected algorithms: {algos}")
             exp = int(request.form.get('table_size_exp', 22))
             chunks = int(request.form.get('chunksize', 1_000_000))
 
             # Kiểm tra file hợp lệ
             if not f or not f.filename.endswith('.csv'):
+                print("Invalid file format")
                 flash('Vui lòng upload file CSV có định dạng .csv!', 'danger')
                 return redirect(request.url)
 
@@ -566,7 +591,9 @@ def upload_file():
             f.seek(0, 2)
             size = f.tell()
             f.seek(0)
+            print(f"File size: {size} bytes")
             if size > 10 * 1024 * 1024:
+                print("File too large")
                 flash('File quá lớn! Vui lòng chọn file nhỏ hơn 10MB.', 'danger')
                 return redirect(request.url)
 
@@ -574,16 +601,20 @@ def upload_file():
             os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
             name = secure_filename(f.filename)
             path = os.path.join(app.config['UPLOAD_FOLDER'], name)
+            print(f"Saving file to: {path}")
             f.save(path)
 
             # Kiểm tra cột CSV
             try:
                 df = pd.read_csv(path, nrows=1)
+                print(f"CSV columns: {df.columns.tolist()}")
                 if 'key' not in df.columns or 'value' not in df.columns:
+                    print("Missing required columns")
                     flash("File CSV phải có cột 'key' và 'value'!", 'danger')
                     os.remove(path)
                     return redirect(request.url)
             except Exception as e:
+                print(f"Error reading CSV: {str(e)}")
                 flash(f'Lỗi khi đọc file CSV: {str(e)}', 'danger')
                 os.remove(path)
                 return redirect(request.url)
@@ -648,7 +679,7 @@ def upload_file():
             flash(f'Lỗi không xác định: {str(e)}', 'danger')
             return redirect(request.url)
 
-    return render_template('upload_file.html')
+    return render_template('upload.html')
 
 @app.route('/about')
 def about():

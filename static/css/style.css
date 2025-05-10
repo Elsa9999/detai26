@@ -1,2 +1,94 @@
-body { background: #f8f9fa; }
-.card { border-radius: .5rem; }
+body {
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(80, 80, 160, 0.12), 0 1.5px 4px rgba(80, 80, 160, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.5s;
+  opacity: 0;
+  animation: cardFadeIn 0.8s forwards;
+}
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.card:hover {
+  transform: translateY(-4px) scale(1.03) rotate(-0.5deg);
+  box-shadow: 0 8px 32px rgba(80, 80, 160, 0.18), 0 2px 8px rgba(80, 80, 160, 0.12);
+}
+.card:active {
+  transform: scale(0.98) rotate(0.5deg);
+}
+
+.btn-primary, .btn-outline-primary {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(102,126,234,0.15);
+  transition: background 0.2s, box-shadow 0.2s, filter 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary:hover, .btn-outline-primary:hover {
+  background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+  color: #fff;
+  box-shadow: 0 4px 24px 2px #a18cd1, 0 4px 16px rgba(102,126,234,0.22);
+  filter: brightness(1.08) drop-shadow(0 0 8px #a18cd1);
+  animation: btnWobble 0.25s;
+}
+@keyframes btnWobble {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.05) rotate(-2deg); }
+  60% { transform: scale(0.97) rotate(2deg); }
+  100% { transform: scale(1); }
+}
+
+.btn-warning {
+  border-radius: 2rem;
+  font-weight: 600;
+}
+
+input.form-control, select.form-select {
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 4px rgba(80, 80, 160, 0.07);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+input.form-control:focus, select.form-select:focus {
+  box-shadow: 0 0 0 3px #a18cd155;
+  border-color: #764ba2;
+}
+input.form-control:hover, select.form-select:hover {
+  box-shadow: 0 2px 12px #a18cd133;
+  border-color: #667eea;
+}
+
+.alert {
+  border-radius: 1rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 192, 203, 0.08);
+  opacity: 0.97;
+  animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 0.97; transform: none; }
+}
+
+h5, h6, .card-header {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f8f9fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1c4e9;
+  border-radius: 4px;
+}

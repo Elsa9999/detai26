@@ -34,10 +34,10 @@
       </div>
     </form>
 
-    {% with messages = get_flashed_messages(category_filter=['crud']) %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
-        {% for msg in messages %}
-          <div class="alert alert-success mt-3">{{ msg }}</div>
+        {% for category, msg in messages %}
+          <div class="alert alert-{{ category }} mt-3">{{ msg }}</div>
         {% endfor %}
       {% endif %}
     {% endwith %}
